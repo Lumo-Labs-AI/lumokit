@@ -53,3 +53,6 @@ class CONFIG:
 
     # COIN MARKET CAP API
     CMC_API_KEY: str = os.getenv("CMC_API_KEY", "")
+
+    # DAPPRADAR API
+    DAPPRADAR_API_KEY: str = os.getenv("DAPPRADAR_API_KEY", "")

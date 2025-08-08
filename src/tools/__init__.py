@@ -4,6 +4,7 @@ from .coingecko import (CoinGeckoCoinDataTool, CoinGeckoExchangeRatesTool,
 from .coinmarketcap import CMCCryptoNewsTool, CMCTrendingCoinsTool
 from .common import TokenIdentificationTool, WalletPortfolioTool
 from .cryptodotnews import CNMemecoinsNewsTool
+from .dappradar import DappRadarGameTrackerTool
 from .dexscreener import (DexScreenerTokenInformationTool,
                           DexScreenerTopBoostsTool)
 from .fluxbeam import FluxBeamTokenPriceTool
@@ -43,6 +44,7 @@ TOOL_DESCRIPTIONS = {
     "SolanaSendSplTokensTool": "solana_send_spl_tokens_tool: Send SPL tokens from your agent wallet to a specified Solana address. Requires your agent wallet's public and encrypted private keys, token address, and amount. [LOW PRIORITY, SHOULD BE USED IN PLACE: 6]",
     "SolanaBurnTokenTool": "solana_burn_token_tool: Burn SPL tokens from your agent wallet, permanently removing them from circulation. Requires your agent wallet's public and encrypted private keys, token address, and amount. [LOW PRIORITY, SHOULD BE USED IN PLACE: 6]",
     "PumpFunLaunchCoinTool": "pumpfun_launch_coin_tool: Launch a new token on Pump.fun platform. Create your own token with custom name, symbol, description, and image. Requires agent wallet for token creation. [LOW PRIORITY, SHOULD BE USED IN PLACE: 6]",
+    "DappRadarGameTrackerTool": "dappradar_game_tracker_tool: Track active game projects on various blockchains (Solana, Ethereum, Polygon, etc.) including MMORPG, arcade, staking games, and their token data, player counts, and current status. Perfect for players, investors, game developers, and influencers. [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 5]",
 }
 
 
@@ -77,6 +79,7 @@ __all__ = [
     "JupiterTokenPriceTool",
     "JupiterTokenInformationTool",
     "JupiterSwapTool",
+    "DappRadarGameTrackerTool",
     "DexScreenerTopBoostsTool",
     "DexScreenerTokenInformationTool",
     "BirdeyeTokenTrendingTool",

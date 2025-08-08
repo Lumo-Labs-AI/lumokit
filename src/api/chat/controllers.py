@@ -28,9 +28,9 @@ from tools import (BirdeyeAllTimeTradesTool, BirdeyeTokenTrendingTool,
                    CMCCryptoNewsTool, CMCTrendingCoinsTool,
                    CNMemecoinsNewsTool, CoinGeckoCoinDataTool,
                    CoinGeckoExchangeRatesTool, CoinGeckoGlobalCryptoDataTool,
-                   CoinGeckoTrendingTool, DexScreenerTokenInformationTool,
-                   DexScreenerTopBoostsTool, FluxBeamTokenPriceTool,
-                   GTPumpFunTrendingTool, JupiterSwapTool,
+                   CoinGeckoTrendingTool, DappRadarGameTrackerTool,
+                   DexScreenerTokenInformationTool, DexScreenerTopBoostsTool,
+                   FluxBeamTokenPriceTool, GTPumpFunTrendingTool, JupiterSwapTool,
                    JupiterTokenInformationTool, JupiterTokenPriceTool,
                    PumpFunLaunchCoinTool, RugcheckTokenInformationTool,
                    SolanaBurnTokenTool, SolanaSendSolTool,
@@ -458,7 +458,8 @@ async def process_chat_request(chat_request: ChatRequest, db: Session):
                     solana_send_spl_tokens_tool = SolanaSendSplTokensTool()
                     solana_burn_token_tool = SolanaBurnTokenTool()
                     pumpfun_launch_coin_tool = PumpFunLaunchCoinTool()
-
+                    dappradar_game_tracker_tool = DappRadarGameTrackerTool()
+                    
                     # Default tools that are always included
                     tools = [wallet_portfolio_tool, token_identification_tool]
 
@@ -485,6 +486,7 @@ async def process_chat_request(chat_request: ChatRequest, db: Session):
                         "solana_send_spl_tokens_tool": solana_send_spl_tokens_tool,
                         "solana_burn_token_tool": solana_burn_token_tool,
                         "pumpfun_launch_coin_tool": pumpfun_launch_coin_tool,
+                        "dappradar_game_tracker_tool": dappradar_game_tracker_tool
                     }
 
                     requested_tools = [
