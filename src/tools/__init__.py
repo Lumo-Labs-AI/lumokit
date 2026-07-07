@@ -11,6 +11,7 @@ from .geckoterminal import GTPumpFunTrendingTool
 from .jupiter import (JupiterSwapTool, JupiterTokenInformationTool,
                       JupiterTokenPriceTool)
 from .pumpfun import PumpFunLaunchCoinTool
+from .cabalhunter import CabalHunterRiskTool
 from .rugcheck import RugcheckTokenInformationTool
 from .solana import (SolanaBurnTokenTool, SolanaSendSolTool,
                      SolanaSendSplTokensTool)
@@ -23,6 +24,7 @@ TOOL_DESCRIPTIONS = {
     "WalletPortfolioTool": "wallet_portfolio_tool: Get detailed information about all tokens, their contract address, held in a wallet. [HIGHEST PRIORITY, SHOULD BE USED IN PLACE: 1]",
     "TokenIdentificationTool": "token_identification_tool: Get token information by name or ticker symbol. Use this to find contract addresses for tokens. [HIGHEST PRIORITY, SHOULD BE USED IN PLACE: 2]",
     "RugcheckTokenInformationTool": "rugcheck_token_information_tool: Get detailed token information including creator details, supply, top holders, and insiders information. [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 3]",
+    "CabalHunterRiskTool": "cabal_hunter_risk_tool: Get a complete pre-trade safety verdict for a Solana token before buying - traces coordinated wallet/cabal funding clusters, same-block bundles, live coordinated dumps, serial-rug deployer history and honeypot/freeze-authority traps into a single 0-100 Exit-Liquidity Risk score with a recommendation (AVOID/CAUTION/LOW SIGNAL). [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 3]",
     "FluxBeamTokenPriceTool": "fluxbeam_token_price_tool: Get the current price of a token in USD (US Dollars) from FluxBeam. [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 4]",
     "JupiterTokenPriceTool": "jupiter_token_price_tool: Get the current price of one or more Solana tokens in USD from Jupiter. Supports multiple comma-separated token addresses. [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 5]",
     "JupiterTokenInformationTool": "jupiter_token_information_tool: Get detailed token information and metadata for a specific Solana token from Jupiter. Provides details like name, symbol, decimals, and other token attributes. [MEDIUM PRIORITY, SHOULD BE USED IN PLACE: 5]",
@@ -73,6 +75,7 @@ __all__ = [
     "WalletPortfolioTool",
     "TokenIdentificationTool",
     "RugcheckTokenInformationTool",
+    "CabalHunterRiskTool",
     "FluxBeamTokenPriceTool",
     "JupiterTokenPriceTool",
     "JupiterTokenInformationTool",
