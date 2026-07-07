@@ -24,7 +24,7 @@ from models.requests import Requests
 from models.users import User
 from settings.config import CONFIG
 from settings.logger import logger
-from tools import (BirdeyeAllTimeTradesTool, BirdeyeTokenTrendingTool,
+from tools import (CabalHunterRiskTool, BirdeyeAllTimeTradesTool, BirdeyeTokenTrendingTool,
                    CMCCryptoNewsTool, CMCTrendingCoinsTool,
                    CNMemecoinsNewsTool, CoinGeckoCoinDataTool,
                    CoinGeckoExchangeRatesTool, CoinGeckoGlobalCryptoDataTool,
@@ -436,6 +436,7 @@ async def process_chat_request(chat_request: ChatRequest, db: Session):
                     wallet_portfolio_tool = WalletPortfolioTool()
                     token_identification_tool = TokenIdentificationTool()
                     rugcheck_token_information_tool = RugcheckTokenInformationTool()
+                    cabal_hunter_risk_tool = CabalHunterRiskTool()
                     fluxbeam_token_price_tool = FluxBeamTokenPriceTool()
                     jupiter_token_price_tool = JupiterTokenPriceTool()
                     jupiter_token_information_tool = JupiterTokenInformationTool()
@@ -465,6 +466,7 @@ async def process_chat_request(chat_request: ChatRequest, db: Session):
                     # Process requested additional tools
                     available_tools = {
                         "rugcheck_token_information_tool": rugcheck_token_information_tool,
+                        "cabal_hunter_risk_tool": cabal_hunter_risk_tool,
                         "fluxbeam_token_price_tool": fluxbeam_token_price_tool,
                         "jupiter_token_price_tool": jupiter_token_price_tool,
                         "jupiter_token_information_tool": jupiter_token_information_tool,
